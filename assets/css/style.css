@@ -263,10 +263,19 @@ body {
     font-size: 14px;
 }
 
+#loading{
+    display: flex;
+    justify-content: center;
+}
+
 
 
 @media(width > 768px) {
 
+    #loading{
+        margin-left: 383px;
+    }
+    
     .products-container{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -309,13 +318,19 @@ body {
 }
 
 @media(width > 1200px){
+    #loading{
+        margin-left: 910px;
+    }
     .products-container{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
 }
 
-@media(width > 1900px){
+@media(width > 1920px){
+    #loading{
+        margin-left: 1250px;
+    }
     .products-container{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;

@@ -10,6 +10,7 @@ const closeModal = document.querySelector(".close-modal");
 
 async function getCountries(){
     try{
+      productsContainer.innerHTML = `<i id="loading" class="fa-solid fa-spinner fa-spin"></i>`;
       const response = await fetch(filePath);
       if(!response.ok){
         throw new Error("Veri alınamadı.");
@@ -33,7 +34,7 @@ async function getCountries(){
                 <div class="content-info">
                     <div class="population">
                         <h5>Population:</h5>
-                        <p>${country.population}</p>
+                        <p>${country.population.toLocaleString()}</p>
                     </div>
                     <div class="region">
                         <h5>Region:</h5>
@@ -48,7 +49,7 @@ async function getCountries(){
         `
     });
 
-    document.querySelectorAll(".countries").forEach(item => {
+    document.querySelectorAll(".content-container").forEach(item => {
       item.addEventListener("click", function () {
           const countryIndex = this.getAttribute("data-index");
           openModal(countries[countryIndex]);
@@ -103,7 +104,8 @@ function openModal(country) {
               </div>
           </div>
       </div>
-  </div>`;
+  </div>
+  `
   modal.style.display = "flex";
 }
 
