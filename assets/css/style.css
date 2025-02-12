@@ -190,7 +190,9 @@ body {
 
 .content-container img {
     border-radius: 5px 5px 0px 0px;
-    margin-bottom: 24px
+    margin-bottom: 24px;
+    width: 264px;
+    height: 160px;
 }
 
 .content-container .country-name {
