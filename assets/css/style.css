@@ -193,6 +193,7 @@ body {
     margin-bottom: 24px;
     width: 264px;
     height: 160px;
+    cursor: pointer;
 }
 
 .content-container .country-name {
@@ -202,6 +203,7 @@ body {
     line-height: 26px;
     letter-spacing: 0px;
     margin-bottom: 16px;
+    cursor: pointer;
 }
 
 .content-info {
