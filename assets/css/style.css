@@ -91,7 +91,7 @@ body {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
-.main-header-container .header {
+.main-header-container #header {
 
     font-weight: 800;
     font-size: 14px;
@@ -275,6 +275,12 @@ body {
 
       .main-header-container{
         width: 100%;
+
+      }
+
+      #header {
+        font-size: 24px !important;
+        line-height: 32.74px;
       }
 
       .search-region-select input {
@@ -287,6 +293,11 @@ body {
 
       .mode {
         padding-right: 80px;
+
+      }
+
+      .mode p {
+        font-size: 16px;
       }
 
 }
