@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+body {
+    font-family: "Red Hat Text", sans-serif;
+    background-color: #FAFAFA;
+}
+
+.container {
+
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.main-header-container {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 14px 30px 16px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.main-header-container .header {
+
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    color: #111517;
+}
+
+.mode {
+    display: flex;
+    gap: 8px;
+}
+
+.mode p {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16.37px;
+    letter-spacing: 0px;
+}
+
+.search-container input {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0px 16px 0px 16px;
+
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    outline: none;
+    height: 48px;
+    background-color: #FFFFFF;
+    border: none;
+
+}
+
+#inputText {
+    padding-left: 70px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    color: #C4C4C4;
+}
+
+.search-container i {
+    position: absolute;
+    left: 32px;
+    margin-top: -42px;
+    font-size: 16px;
+    color: #B2B2B2;
+}
+
+.search-container input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.select-option-container {
+    padding-left: 16px;
+}
+
+.select-option-container select {
+    width: 200px;
+    height: 48px;
+    border: none;
+    padding-left: 24px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+
+
+#region:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+.content-container {
+    width: 264px;
+    height: 336px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+.content-container img {
+    border-radius: 5px 5px 0px 0px;
+    margin-bottom: 24px
+}
+
+.content-container .country-name {
+    padding-left: 24px;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    margin-bottom: 16px;
+}
+
+.content-info {
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.content-info .population {
+    display: flex;
+    gap: 5px;
+    color: #111517;
+    line-height: 16px;
+}
+
+.population h5{
+    font-weight: 600px;
+    font-size: 14px;
+}
+
+.population p {
+    font-weight: 500px;
+    font-size: 14px;
+}
+
+.content-info .region {
+    display: flex;
+    gap: 5px;
+    color: #111517;
+    line-height: 16px;
+}
+
+.content-info .region h5{
+    font-weight: 600px;
+    font-size: 14px;
+}
+
+.content-info .region p {
+    font-weight: 100px;
+    font-size: 14px;
+}
+.content-info .capital {
+    display: flex;
+    gap: 5px;
+    color: #111517;
+    line-height: 16px;
+}
+
+.content-info .capital h5{
+    font-weight: 600px;
+    font-size: 14px;
+}
+
+.content-info .capital p {
+    font-weight: 100px;
+    font-size: 14px;
+}
+
+@media(width > 768px) {
+
+    .products-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+      }
+
+      .search-region-select{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 80px 0px 80px;
+      }
+
+      .main-header-container{
+        width: 100%;
+      }
+
+      .search-region-select input {
+        width: 360px;
+      }
+
+      .main-header-container h1 {
+        padding-left: 80px;
+      }
+
+      .mode {
+        padding-right: 80px;
+      }
+
+}
+
+@media(width > 1200px){
+    .products-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      }
+}
