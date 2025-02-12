@@ -12,7 +12,7 @@ HTML – Sayfa yapısını oluşturmak için.
 CSS – Şık ve modern bir tasarım için.
 JavaScript – Dinamik veri çekme ve filtreleme işlemleri için.
 📷 Ekran Görüntüleri
---------------------------------------------------------------------------------------------------------------------
+
 🌍 Country Info Web App
 This project is a responsive web page that displays countries' flags, populations, regions, and continents. Users can easily access essential information about countries and quickly find the one they are looking for using filtering options.
 
