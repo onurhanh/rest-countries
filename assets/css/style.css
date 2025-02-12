@@ -295,6 +295,13 @@ body {
     .products-container{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-
       }
 }
+
+@media(width > 1900px){
+    .products-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      }
+}
+
