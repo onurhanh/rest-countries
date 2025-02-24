@@ -26,9 +26,9 @@ async function getCountries(){
 
   function renderCountries(){
     productsContainer.innerHTML = "";
-    countries.forEach(country =>{
+    countries.forEach((country, index) =>{
         productsContainer.innerHTML +=  `
-            <div class="content-container">
+            <div class="content-container" data-index="${index}">
                 <img src="${country.flags.png}" alt="Germany">
                 <h1 class="country-name">${country.name.common}</h1>
                 <div class="content-info">
@@ -76,7 +76,8 @@ async function getCountries(){
 
 function openModal(country) {
  
-  
+  productsContainer.innerHTML = `<i id="loading" class="fa-solid fa-spinner fa-spin"></i>`;
+  productsContainer.innerHTML = "";
   modalDetails.innerHTML = ""; 
   modalDetails.innerHTML += `
   <div class="dark-countries">
@@ -84,7 +85,7 @@ function openModal(country) {
       <div class="dark-country-container">
           <h2>${country.name.common}</h2>
           <div class="dark-country-content">
-              <p>Native Name: <span>${country.name.nativeName}</span></p>
+              <p>Native Name: <span>${country.name.common}</span></p>
               <p>Population: <span>${country.population}</span></p>
               <p>Region: <span>${country.region}</span></p>
               <p>Sub Region: <span>${country.subregion}</span></p>
@@ -92,8 +93,6 @@ function openModal(country) {
           </div>
           <div class="dark-country-details">
               <p>Top Level Domain: <span>${country.tld}</span></p>
-              <p>Currencies: <span>${country.currencies}</span></p>
-              <p>Languages: <span>${country.languages}</span></p>
           </div>
           <div class="dark-border">
               <h2>Border Countries:</h2>
@@ -107,6 +106,7 @@ function openModal(country) {
   </div>
   `
   modal.style.display = "flex";
+  console.log("Seçilen Ülke Verisi:", country);
 }
 
 
@@ -114,6 +114,7 @@ function openModal(country) {
 
 closeModal.addEventListener("click", () => {
   modal.style.display = "none";
+  getCountries();
 });
 
 window.addEventListener("click", (event) => {

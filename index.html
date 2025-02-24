@@ -39,20 +39,45 @@
         </div>
 
         <div class="products-container">
+            <div class="dark-countries">
+                <img src="${country.flags.png}" alt="Flag of ${country.name.common}">
+                <div class="dark-country-container">
+                    <h2>${country.name.common}</h2>
+                    <div class="dark-country-content">
+                        <p>Native Name: <span>${country.name.common}</span></p>
+                        <p>Population: <span>${country.population}</span></p>
+                        <p>Region: <span>${country.region}</span></p>
+                        <p>Sub Region: <span>${country.subregion}</span></p>
+                        <p>Capital: <span>${country.capital}</span></p>
+                    </div>
+                    <div class="dark-country-details">
+                        <p>Top Level Domain: <span>${country.tld}</span></p>
+                    </div>
+                    <div class="dark-border">
+                        <h2>Border Countries:</h2>
+                        <div class="dark-border-box">
+                            ${country.borders && country.borders.length > 0 
+                                ? country.borders.map(border => `<p>${border}</p>`).join("") 
+                                : "<p>None</p>"}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-    </div>
-
-    <div class="modal" id="countryModal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="dark-countries-container">
-                <div class="dark-countries" id="modal-details">
-                    
+        <div class="modal" id="countryModal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="dark-countries-container">
+                    <div class="dark-countries" id="modal-details">
+                        
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+
 </body>
 
 </html>
