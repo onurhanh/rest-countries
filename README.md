@@ -21,7 +21,6 @@ CSS – Şık ve modern bir tasarım için.
 
 JavaScript – Dinamik veri çekme ve filtreleme işlemleri için.
 
-Link: https://rest-countries-lilac-ten.vercel.app/
 
 --------------------------------------------------------------------------------------------------------------------
 
