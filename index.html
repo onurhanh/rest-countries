@@ -1,83 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/app.js" defer></script>
-</head>
-
-<body>
-    <div class="container">
-        <div class="main-header-container">
-            <h1 id="header">Where in the world?</h1>
-            <div class="mode">
-                <p><i class="fa-regular fa-moon"></i></p>
-                <p>Dark Mode</p>
-            </div>
-        </div>
-        <div class="search-region-select">
-            <div class="search-container">
-                <i class="fa-duotone fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="searchInput" placeholder="Search for a country...">
-            </div>
-            <div class="select-option-container">
-                <select name="region" id="region">
-                    <option value="" disabled selected>Filter by Region</option>
-                    <option value="africa"><p>Africa</p></option>
-                    <option value="america"><p>America</p></option>
-                    <option value="asia"><p>Asia</p></option>
-                    <option value="europe"><p>Europe</p></option>
-                    <option value="oceania"><p>Oceania</p></option>
-                </select>
-            </div>
-        </div>
-
-        <div class="products-container">
-            <div class="dark-countries">
-                <img src="${country.flags.png}" alt="Flag of ${country.name.common}">
-                <div class="dark-country-container">
-                    <h2>${country.name.common}</h2>
-                    <div class="dark-country-content">
-                        <p>Native Name: <span>${country.name.common}</span></p>
-                        <p>Population: <span>${country.population}</span></p>
-                        <p>Region: <span>${country.region}</span></p>
-                        <p>Sub Region: <span>${country.subregion}</span></p>
-                        <p>Capital: <span>${country.capital}</span></p>
-                    </div>
-                    <div class="dark-country-details">
-                        <p>Top Level Domain: <span>${country.tld}</span></p>
-                    </div>
-                    <div class="dark-border">
-                        <h2>Border Countries:</h2>
-                        <div class="dark-border-box">
-                            ${country.borders && country.borders.length > 0 
-                                ? country.borders.map(border => `<p>${border}</p>`).join("") 
-                                : "<p>None</p>"}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal" id="countryModal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <div class="dark-countries-container">
-                    <div class="dark-countries" id="modal-details">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <title>Rest Countries Api with Color Theme Switcher</title>
+    <script type="module" src="/src/main.jsx" defer></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>

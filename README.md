@@ -1,53 +1,70 @@
-🌍 Country Info Web App
+# 🌍 Rest Countries Application
 
-Bu proje, ülkelerin bayraklarını, nüfuslarını, bulundukları bölgeyi ve kıtayı gösteren responsive bir web sayfasıdır. Kullanıcılar, ülkeler hakkında temel bilgilere kolayca ulaşabilir ve filtreleme seçenekleriyle aradıkları ülkeyi hızlıca bulabilirler.
+> A modern and responsive React application where you can search, filter, and view detailed information about countries around the world.
 
-✨ Özellikler
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5)
 
-✅ Ülkelerin bayrakları, nüfusları, bölgeleri ve kıtaları gösterilir.
+## 🔍 Project Overview
 
-✅ Duyarlı (responsive) tasarım, tüm cihazlarda mükemmel görüntüleme sağlar.
+**Rest Countries App** is a React application that dynamically displays country data using the **[Rest Countries API](https://restcountries.com/)**.  
+Users can search for countries by name, filter them by region, and view detailed information about each selected country.
 
-✅ Kullanıcı dostu bir arayüz ile kolay gezinme.
+![image](https://github.com/user-attachments/assets/d797e4f5-f10a-4b38-94fd-06dd40b5c515)
 
-✅ Ülkeleri bölgelere veya kıtalara göre filtreleme imkanı.
+## 🚀 Features
 
+### 🔎 Country Search and Filtering
+- Search for countries in real-time by name.
+- Filter countries by continent or region using a dropdown menu.
 
-🛠️ Kullanılan Teknolojiler
+![image](https://github.com/user-attachments/assets/3110be63-531a-4f78-9540-33aa87441f21)
 
-HTML – Sayfa yapısını oluşturmak için.
+### 📄 Country Detail Page
+- Displays country information such as name, population, region, capital, languages, currency, top-level domain, and bordering countries.
+- The country name appears with an **entry animation** on the detail page.
 
-CSS – Şık ve modern bir tasarım için.
+![image](https://github.com/user-attachments/assets/8459b856-779a-4f56-9e5a-a7cdfd90d2ce)
 
-JavaScript – Dinamik veri çekme ve filtreleme işlemleri için.
+### 🌙 Dark Mode Support
+- Users can toggle between light and dark themes.
+- The selected theme is stored in `localStorage` for persistence across sessions.
 
+![image](https://github.com/user-attachments/assets/70988e86-ec44-4222-8177-d1f41333940f)
 
---------------------------------------------------------------------------------------------------------------------
+### 📱 Responsive Design
+- Mobile-first layout that adapts smoothly to all screen sizes.
 
-🌍 Country Info Web App
+### 🔗 Navigation with HashRouter
+- Page transitions are handled using hash-based URL routing (`#`),  
+  allowing deep linking and bookmarking support.
 
-This project is a responsive web page that displays countries' flags, populations, regions, and continents. Users can easily access essential information about countries and quickly find the one they are looking for using filtering options.
+### 🧠 Global Theme Management (with Context API)
+- Theme control and component state sharing are managed using `useContext`.
+- Eliminates the need for prop drilling between components.
 
-✨ Features
+## 🌐 Live Demo
 
-✅ Displays flags, populations, regions, and continents of countries.
+🔗 [https://rest-countries-api-taupe-rho.vercel.app](https://rest-countries-api-taupe-rho.vercel.app)
 
-✅ Responsive design ensures perfect display across all devices.
+## 📂 Project Structure
 
-✅ User-friendly interface for easy navigation.
+```bash
+📦 public
+ ┗ 📂 img
 
-✅ Ability to filter countries by region or continent.
-
-
-🛠️ Technologies Used
-
-HTML – For structuring the web page.
-
-CSS – For a sleek and modern design.
-
-JavaScript – For fetching dynamic data and filtering options.
-
-
-Link: https://rest-countries-lilac-ten.vercel.app/
-
-![Ekran görüntüsü 2025-02-13 000115](https://github.com/user-attachments/assets/ecdeee1e-2696-480c-97a5-4dfbd93cd701)
+📦 src
+ ┣ 📂 assets
+ ┃ ┗ 📂 css
+ ┃   ┣ 📄 darkMode.css           # Dark mode styles
+ ┃   ┣ 📄 main.css               # Main stylesheet
+ ┃   ┗ 📄 reset.css              # CSS reset to normalize browser styles
+ ┣ 📂 components
+ ┃ ┣ 📄 CountryContent.jsx      # Main component displaying country cards
+ ┃ ┣ 📄 CountryDetails.jsx      # Component for country detail page
+ ┃ ┗ 📄 Header.jsx              # App header and filtering section
+ ┣ 📄 App.jsx                   # Root component of the app
+ ┣ 📄 main.jsx                  # React DOM entry point
+┗ 📄 index.html                 # HTML template
