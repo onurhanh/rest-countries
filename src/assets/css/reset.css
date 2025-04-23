@@ -17,7 +17,7 @@ body {
   font-family: Nunito Sans;
 }
 
-/* 5. Improve media defaults */
+/* 5. Improve media defaults. */
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
