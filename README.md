@@ -47,8 +47,7 @@ Users can search for countries by name, filter them by region, and view detailed
 
 ## 🌐 Live Demo
 
-🔗 [https://rest-countries-api-taupe-rho.vercel.app](https://rest-countries-api-taupe-rho.vercel.app)
-
+🔗 https://rest-countries-lilac-ten.vercel.app/
 ## 📂 Project Structure
 
 ```bash
